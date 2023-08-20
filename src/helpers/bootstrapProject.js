@@ -11,12 +11,12 @@ const foldersToCreate = ['assets', 'components', 'entities', 'utils'];
 
 const spinner = createSpinner();
 
-const bootstrapProject = async (projectName) => {
+const bootstrapProject = async (projectName, project_type) => {
     spinner.start({
         text: 'Boostrapping project',
     });
 
-    await fs.copy(join(__dirname, '../../templates/front-end-template'), `./${projectName}`);
+    await fs.copy(join(__dirname, `../../templates/${project_type}`), `./${projectName}`);
 
     for (let i = 0; i < foldersToCreate.length; i += 1) {
         fs.mkdir(join(process.cwd(), `./${projectName}/src`, foldersToCreate[i]));

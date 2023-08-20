@@ -3,14 +3,19 @@ import inquirer from 'inquirer';
 
 const projectTypeChoices = [{
     name: 'Front End (NextJs, Tailwindcss)',
-    value: 'fe'
+    value: 'fe-next'
 }, {
-    name: 'Full Stack (NextJS, Tailwind, tRPC, Prisma)',
-    value: 'fs'
-}, {
-    name: 'Back End (NestJS, Prisma)',
-    value: 'be'
-}];
+    name: 'Front End (Vite, Tailwindcss)',
+    value: 'fe-vite'
+}
+    // , {
+    //     name: 'Full Stack (NextJS, Tailwind, tRPC, Prisma)',
+    //     value: 'fs'
+    // }, {
+    //     name: 'Back End (NestJS, Prisma)',
+    //     value: 'be'
+    // }
+];
 
 
 const askProjectDetails = async () => {

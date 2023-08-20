@@ -20,7 +20,7 @@ const main = async () => {
 
     const { project_name, project_type } = await askProjectDetails();
 
-    await bootstrapProject(project_name);
+    await bootstrapProject(project_name, project_type);
 };
 
 await main();
